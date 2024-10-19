@@ -4,41 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="icomoon/style.css">
     <title>oDashBoard</title>
 </head>
 <body>
     <main>
         <nav class="sidebar">
             <div class="logo">
-                <img src="icons/logo.svg" alt="logo" height="32">
-                DASHBOARD
+                <span class="icon-logo"></span>
+                <span>Dashboard</span>
             </div>
             <ul class="top-side-bar">
-                <li>Home</li>
-                <li>Profile</li>
-                <li>Messages</li>
-                <li>History</li>
-                <li>Tasks</li>
-                <li>Communities</li>
+                <li><span class="icon-home-account"></span>Home</li>
+                <li><span class="icon-account"></span>Profile</li>
+                <li><span class="icon-message-bulleted"></span>Messages</li>
+                <li><span class="icon-history"></span>History</li>
+                <li><span class="icon-file-multiple"></span>Tasks</li>
+                <li><span class="icon-account-group"></span>Communities</li>
             </ul>
             <ul class="bot-side bar">
-                <li>Settings</li>
-                <li>Support</li>
-                <li>Privacy</li>
+                <li><span class="icon-cog"></span>Settings</li>
+                <li><span class="icon-help-box"></span>Support</li>
+                <li><span class="icon-shield-check"></span>Privacy</li>
             </ul>
         </nav>
         <header class="header">
-            <div class="top-header">
-                <input type="search" name="search" id="srch">
-                <div class="top-right-header">
-                    User Name
+                <div class="header-top-left">
+                    <span class="icon-magnify"></span>
+                    <input type="search" name="search" id="srch">
                 </div>
-            </div>
-            <div class="bot-header">
-                <div class="bot-left-header">
-                    User Name
+                <div class="header-top-right">
+                    <span class="icon-bell-ring"></span>
+                    <span>
+                        <span class="icon-account"></span>
+                    </span>
+                    <span>
+                        Mohe Achou
+                    </span>
                 </div>
-                <div class="bot-left-header">
+                <div class="header-bot-left">
+                    <span class="icon-account"></span>
+                    <div>
+                        <span>Hi there <br></span>
+                        <span>Mohe Achu (@hachou)</span>
+                    </div>
+                </div>
+                <div class="header-bot-right">
                     <button>
                         New
                     </button>
@@ -49,8 +60,6 @@
                         Share
                     </button>
                 </div>
-            </div>
-
         </header>
         <div class="main-container">
             <div class="project-container">

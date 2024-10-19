@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'roboto';
+    src: url(./Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'roboto-bold';
+    src: url(./Roboto/Roboto-Bold.ttf);
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,7 +15,7 @@
 }
 
 :root {
-    --color-blue: #38bdf8;
+    --color-blue: #2c96ee;
     --text-color-white: #fafafa;
 }
 
@@ -18,21 +28,119 @@ body {
 }
 
 main {
+    font-family: 'roboto', sans-serif, system-ui;
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
     height: 100%;
 
 }
 
 nav {
+    font-family: 'roboto-bold', sans-serif, system-ui;
     grid-row: 1 / 3;
     background-color: var(--color-blue);
     color: var(--text-color-white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+nav > ul > li {
+    list-style-type: none;
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: var(--color-blue);
+    color: var(--text-color-white);
+    border: none;
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+[class^="icon-"] {
+    margin-right: 0.5rem;
 }
 
 .logo { 
     font-size: 2rem;
-    font-weight: 800;
     display: inline-flex;
+    align-items: center;
+
+}
+
+.icon-logo {
+    font-size: 2.5rem;
+}
+
+header {
+    font-family: 'roboto-bold', sans-serif, system-ui;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.header-top-left {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 1.5rem;
+}
+
+.header-top-right {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    font-weight: 900;
+    & .icon-account {
+        font-size: 2.3rem;
+    }
+}
+.header-bot-left {
+    display: flex ;
+    align-items: center;
+    & > div > span:first-child {
+       font-size: 0.8rem; 
+       font-family: 'roboto', sans-serif, system-ui;
+       font-weight: 700;
+    }
+    & > div > span:last-child {
+        font-size: 1.5rem;
+        font-family: 'roboto-bold', sans-serif, system-ui;
+    }
+    & .icon-account {
+        font-size: 3rem;
+        padding-left: 0.5rem;
+    }
+}
+.header-bot-right {
+    padding: 2rem 3rem 0 0;
+    justify-self: end;
+    display: flex;
+    gap: 1.5rem;
+}
+
+input[type="search"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #d8dee9;
+    border-radius: 32px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+.main-container {
+    grid-row: 2 / 3;
+    background-color: #d8dee9;
 }
